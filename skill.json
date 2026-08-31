@@ -1,0 +1,41 @@
+{
+  "name": "genpark-flash-attention-dense-passage-ranker-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - High-throughput dense passage ranker and sequence-level embedding extractor with flash attention acceleration.",
+  "author": "genpark",
+  "category": "vector-ranking",
+  "tags": [
+    "huggingface",
+    "tei",
+    "flash-attention",
+    "dense-ranker",
+    "vector-search"
+  ],
+  "inputs": {
+    "search_query": {
+      "type": "string"
+    },
+    "candidate_passages_count": {
+      "type": "integer"
+    },
+    "top_k": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "ranking_session_id": {
+      "type": "string"
+    },
+    "throughput_passages_per_sec": {
+      "type": "integer"
+    },
+    "flash_attention_kernel_accelerated": {
+      "type": "boolean"
+    },
+    "top_scoring_passage_id": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
